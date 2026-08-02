@@ -1,69 +1,36 @@
-# React + TypeScript + Vite
+# CVScan.ai — AI-Powered Resume & ATS Scanner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CVScan.ai is a modern, mobile-optimized web application designed to help job seekers optimize their resumes for Applicant Tracking Systems (ATS), match resumes against job descriptions, and explore professional resume templates.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive ATS Scanner**: Instantly analyze resume text, evaluate section scores, check matched keywords, and discover missing industry skills.
+- **AI Job Matcher**: Compare your CV against specific job titles or postings for relevance scoring and targeted improvements.
+- **Professional Templates**: Browse and preview curated resume layouts tailored for tech, engineering, design, and management.
+- **Mobile-First Experience**: Built with a responsive app bar, bottom navigation bar, and hash-based routing (`HashRouter`) for seamless mobile webview performance.
+- **Custom App Branding**: Styled with modern indigo/violet tech aesthetics and a custom application icon.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** with TypeScript
+- **Vite** for lightning-fast builds
+- **React Router DOM** (HashRouter for robust static/mobile runtime)
+- **Lucide React** for modern iconography
+- **CSS Custom Properties** with glassmorphism design system
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Run development server:
+   ```bash
+   pnpm dev
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Build for production:
+   ```bash
+   pnpm build
+   ```
