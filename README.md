@@ -21,11 +21,13 @@ CVScan.ai is a modern, mobile-optimized web application designed to help job see
 ## 🚀 Getting Started
 
 1. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 2. Run development server:
+
    ```bash
    pnpm dev
    ```
